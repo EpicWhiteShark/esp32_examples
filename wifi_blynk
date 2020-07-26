@@ -4,15 +4,18 @@
 #include <WiFiClient.h>
 #include <BlynkSimpleEsp32.h>
 
-char auth[] = "e_RDWNo2DTXkcAt17X0-BasWd3avVFa6";
+char auth[] = "xxxxxxx";
 
-char ssid[] = "multimedia_przygoda";
-char pass[] = "arkadykapitol";
+char ssid[] = "xxxxxxx";
+char pass[] = "xxxxxxx";
+
+const int relay = 4; // Switch is connected to PIN4 on ESP32 board
 
 void setup()
 {
   Serial.begin(115200);
   Blynk.begin(auth, ssid, pass);
+  pinMode(relay, OUTPUT);
 }
 
 void loop()
